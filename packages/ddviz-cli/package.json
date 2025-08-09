@@ -1,0 +1,31 @@
+{
+  "name": "ddviz-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "ddviz": "./bin/ddviz.js"
+  },
+  "dependencies": {
+    "serve-static": "^1.15.0",
+    "finalhandler": "^1.2.0"
+  },
+  "description": "Serve the Gen3 DD Visualizer as a static site on localhost.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<org>/gen3-dd-viz.git",
+    "directory": "packages/ddviz-cli"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin/",
+    "public/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "prepack": "npm run -w dd-viz-app build && node ./scripts/copy-app-dist.js"
+  }
+}

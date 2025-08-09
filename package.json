@@ -1,0 +1,17 @@
+{
+  "name": "gen3-dd-viz-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run -w @gen3/dd-parser build && npm run -w @gen3/dd-viz build && npm run -w dd-viz-app build",
+    "dev": "npm run -w dd-viz-app dev",
+    "typecheck": "npm run -w @gen3/dd-parser typecheck && npm run -w @gen3/dd-viz typecheck && npm run -w dd-viz-app typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

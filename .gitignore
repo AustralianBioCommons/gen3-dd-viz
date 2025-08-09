@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Builds & caches
+dist/
+build/
+.vite/
+.next/
+.turbo/
+coverage/
+*.tsbuildinfo
+.eslintcache
+.parcel-cache/
+
+# OS/editor
+.DS_Store
+*.log
