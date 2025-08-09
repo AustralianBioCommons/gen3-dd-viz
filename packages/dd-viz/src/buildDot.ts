@@ -30,10 +30,21 @@ export function buildDot(graph: DDGraph, orientation: Orientation, catMap?: Reco
   const edges: string[] = [];
   for (const e of graph.edges) {
     const lab = e.label || e.multiplicity || '';
-    const labelAttr = lab ? `, label="${esc(lab)}"` : '';
     const color = e.required ? REQUIRED_EDGE_COLOR : OPTIONAL_EDGE_COLOR;
     const style = e.required ? 'solid' : 'dashed';
-    edges.push(`  "${e.source}" -> "${e.target}" [color="${color}", style="${style}"${labelAttr}];`);
+    
+    const attrs: string[] = [
+      `color="${color}"`,
+      `style="${style}"`,
+    ];
+    if (lab) attrs.push(`label="${esc(lab)}"`);
+    
+    // Many-to-one: crow’s-foot at the SOURCE side (tail)
+    if (e.multiplicity === 'many_to_one') {
+      attrs.push('dir=both', 'arrowtail=crow');
+    }
+    
+    edges.push(`  "${e.source}" -> "${e.target}" [${attrs.join(', ')}];`);
   }
 
   return `${header}\n${nodes.join('\n')}\n${edges.join('\n')}\n}`;

@@ -49,6 +49,15 @@ export default function Legend({ graph }: { graph: DDGraph | null }) {
           <svg width="40" height="12"><line x1="2" y1="6" x2="38" y2="6" stroke={OPTIONAL_EDGE_COLOR} strokeWidth="2" strokeDasharray="4 3" /></svg>
           <div>optional</div>
         </div>
+        <div style={{display:'flex', alignItems:'center', gap:8, marginTop:6}}>
+          <svg width="72" height="16" aria-label="many-to-one">
+            {/* main line */}
+            <path d="M12 8 L66 8" stroke={REQUIRED_EDGE_COLOR} strokeWidth="2" fill="none" />
+            {/* simple crow's-foot to mimic Graphviz 'crow' at the tail */}
+            <path d="M12 8 L4 8 M12 8 L4 3 M12 8 L4 13" stroke="#111" strokeWidth="1.6" fill="none" />
+          </svg>
+          <div>many-to-one</div>
+        </div>
       </div>
     </div>
   );
