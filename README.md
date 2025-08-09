@@ -36,10 +36,6 @@ Then open the URL shown by Vite (http://localhost:5173).
 - Layout is layered (ELK) and rendered to **SVG** for crisp export.
 - Modern evergreen browsers only.
 
-## License
-
-Apache-2.0. If you copy code from the Gen3 data portal, retain attribution in NOTICE.
-
 
 ## Testing
 Run unit tests:
@@ -48,3 +44,14 @@ Run unit tests:
 npm run -w @gen3/dd-parser test
 npm run -w @gen3/dd-viz test
 ```
+
+## Example Dictionaries
+
+This repository includes example Gen3 dictionary JSON files in [`examples/`](./examples/):
+
+- [`dcf.json`](./examples/dcf.json)
+- [`ega.json`](./examples/ega.json)
+- [`gdc.json`](./examples/gdc.json)
+
+These can be used to test the parser or to explore the visualization without needing to source your own schema.
+
