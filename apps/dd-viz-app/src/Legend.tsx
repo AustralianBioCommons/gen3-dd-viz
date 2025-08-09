@@ -29,6 +29,16 @@ export default function Legend({ graph }: { graph: DDGraph | null }) {
           </div>
         ))}
       </div>
+      <div style={{marginBottom: 10}}>
+        <div style={{fontWeight: 600, marginBottom: 6}}>Special nodes</div>
+        <div style={{display:'flex', alignItems:'center', gap:8}}>
+          <svg width="28" height="20">
+            <ellipse cx="14" cy="10" rx="11" ry="7" fill="none" stroke="#111" strokeWidth="1.5" />
+            <ellipse cx="14" cy="10" rx="8" ry="4" fill="none" stroke="#111" strokeWidth="1.5" />
+          </svg>
+          <div>Submittable</div>
+        </div>
+      </div>
       <div>
         <div style={{fontWeight: 600, marginBottom: 6}}>Links</div>
         <div style={{display:'flex', alignItems:'center', gap:8, marginBottom:4}}>
