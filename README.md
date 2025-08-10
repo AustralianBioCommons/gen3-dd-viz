@@ -36,7 +36,7 @@ Open the URL shown by Vite (default is http://localhost:5173).
 
 - `npm run build` — builds parser, viz, and the app
 - `npm run typecheck` — type checks packages and app
-- - `npm run dev` — launches `apps/dd-viz-app` in dev mode
+- `npm run dev` — launches `apps/dd-viz-app` in dev mode
 
 ## Testing
 Run unit tests:
