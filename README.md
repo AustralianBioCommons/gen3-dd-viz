@@ -1,4 +1,6 @@
-# Gen3 Data Dictionary Visualizer (standalone)
+![gdc.svg](examples/gdc.svg "GDC dictionary")
+
+# Gen3 Data Dictionary Visualizer
 
 A lightweight, standalone visualizer for bundled **Gen3** data dictionaries.
 
