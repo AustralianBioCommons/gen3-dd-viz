@@ -26,7 +26,7 @@ npm run dev
 
 ```
 
-Then open the URL shown by Vite (http://localhost:5173).
+Open the URL shown by Vite (default is http://localhost:5173).
 
 ## Workspace scripts
 
@@ -36,7 +36,7 @@ Then open the URL shown by Vite (http://localhost:5173).
 
 ## Notes
 
-- Layout is layered (ELK) and rendered to **SVG** for crisp export.
+- Layout is rendered to **SVG** for export.
 - Modern evergreen browsers only.
 
 
