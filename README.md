@@ -16,11 +16,12 @@ A lightweight, standalone visualizer for bundled **Gen3** data dictionaries.
 # at repo root
 npm install
 
+# build all packages + app
+npm run build
+
 # run the app
 npm run dev
 
-# build all packages + app
-npm run build
 ```
 
 Then open the URL shown by Vite (http://localhost:5173).
