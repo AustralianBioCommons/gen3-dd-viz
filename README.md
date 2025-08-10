@@ -8,7 +8,7 @@ A lightweight, standalone visualizer for bundled **Gen3** data dictionaries.
 
 - **`@gen3/dd-parser`** — TS library that normalizes a compiled Gen3 dictionary into a simple graph model.
 - **`@gen3/dd-viz`** — React component that renders the graph into SVG.
-- **`dd-viz-app`** — zero-backend Vite app: drag & drop your JSON or load via URL.
+- **`dd-viz-app`** — zero-backend Vite app: drag & drop your JSON or load via path.
 
 > Node 18+ recommended.
 
