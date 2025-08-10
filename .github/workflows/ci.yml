@@ -16,7 +16,10 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - run: npm ci
+      - run: npm run -w @gen3/dd-parser build
+      - run: npm run -w @gen3/dd-viz build
       - run: npm run typecheck
+      - run: npm run build
+      # tests
       - run: npm run -w @gen3/dd-parser test
       - run: npm run -w @gen3/dd-viz test
-      - run: npm run build
