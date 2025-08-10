@@ -7,14 +7,19 @@ A lightweight, standalone visualizer for bundled **Gen3** data dictionaries.
 ## What’s inside
 
 - **`@gen3/dd-parser`** — TS library that normalizes a compiled Gen3 dictionary into a simple graph model.
-- **`@gen3/dd-viz`** — React component that renders the graph into SVG.
+- **`@gen3/dd-viz`** — builds a GraphViz DOT document and renders the graph into SVG in React.
 - **`dd-viz-app`** — zero-backend Vite app: drag & drop your JSON or load via path.
 
 > Node 18+ recommended.
 
 ## Quick start
 
+If you don't have it already, [install npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
+
 ```bash
+# clone this repo
+git clone https://github.com/AustralianBioCommons/gen3-dd-viz && cd gen3-dd-viz
+
 # at repo root
 npm install
 
@@ -23,22 +28,15 @@ npm run build
 
 # run the app
 npm run dev
-
 ```
 
 Open the URL shown by Vite (default is http://localhost:5173).
 
 ## Workspace scripts
 
-- `npm run dev` — launches `apps/dd-viz-app` in dev mode
 - `npm run build` — builds parser, viz, and the app
 - `npm run typecheck` — type checks packages and app
-
-## Notes
-
-- Layout is rendered to **SVG** for export.
-- Modern evergreen browsers only.
-
+- - `npm run dev` — launches `apps/dd-viz-app` in dev mode
 
 ## Testing
 Run unit tests:
@@ -56,5 +54,5 @@ This repository includes example Gen3 dictionary JSON files in [`examples/`](./e
 - [`ega.json`](./examples/ega.json)
 - [`gdc.json`](./examples/gdc.json)
 
-These can be used to test the parser or to explore the visualization without needing to source your own schema.
+These can be used to test the parser or to explore the visualization without needing to create your own schema.
 
